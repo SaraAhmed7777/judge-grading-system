@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <table>
+    <tr>
+      <th>Group Number</th>
+      <th>Average Score</th>
+    </tr>
+    <% results.forEach(function(r) { %>
+      <tr>
+        <td><%= r.groupNumber %></td>
+        <td><%= r.average.toFixed(2) %></td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>

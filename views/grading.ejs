@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grading Form</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>Computer Science Project</h2>
+  <form action="/submit" method="POST">
+    <input type="hidden" name="judgeName" value="<%= judge %>">
+    <input type="text" name="groupMembers" placeholder="Group Members" required><br>
+    <input type="text" name="groupNumber" placeholder="Group Number" required><br>
+    <input type="text" name="projectTitle" placeholder="Project Title" required><br>
+
+    <strong>Criteria:</strong><br><br>
+    <input type="number" name="score1" placeholder="Articulate requirements" min="0" max="15" required><br>
+    <input type="number" name="score2" placeholder="Choose tools/methods" min="0" max="15" required><br>
+    <input type="number" name="score3" placeholder="Oral presentation" min="0" max="15" required><br>
+    <input type="number" name="score4" placeholder="Teamwork" min="0" max="15" required><br>
+
+    <textarea name="comments" placeholder="Comments..." rows="4"></textarea><br>
+    <button type="submit">Submit Grades</button>
+  </form>
+</body>
+</html>
